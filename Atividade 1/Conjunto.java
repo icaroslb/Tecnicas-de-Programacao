@@ -108,6 +108,7 @@ class Conjunto{
 			while(elem1!=null || elem2!=null){
 				if(elem1!=null && elem2!=null){
 					if(elem1.val==elem2.val){
+						uni.inserir(vuni, elem1.val);
 						elem1=elem1.prox;
 						elem2=elem2.prox;
 					}else if(elem1.val<elem2.val){
