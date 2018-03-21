@@ -1,26 +1,25 @@
 class Teste1{
 	public static void main(String[] args){
-		Conjunto conj=new Conjunto();
-		
-		for(int i=1; i<5; i++){
-			conj.criar();
-		}
+		Conjunto conj1=new Conjunto();
+		Conjunto conj2=new Conjunto();
+		Conjunto conj3=new Conjunto();
+		Conjunto conj4=new Conjunto();
 		
 		for(int i=0; i<10; i++){
-			conj.inserir(1, i);
+			conj1.inserir(i);
 		}
 		
 		for(int i=0; i<5; i++){
-			conj.inserir(2, i*2);
+			conj2.inserir(i*2);
 		}
 		
 		for(int i=0; i<5; i++){
-			conj.inserir(3, (i*2)+1);
+			conj3.inserir((i*2)+1);
 		}
 		
 		for(int pri=2, i=0; i<10; pri++){
 			if(pri==2){
-				conj.inserir(4, pri);
+				conj4.inserir(pri);
 			}else{
 				if(pri%2!=0){
 					boolean teste=true;
@@ -34,26 +33,35 @@ class Teste1{
 					}
 					
 					if(teste){
-						conj.inserir(4, pri);
+						conj4.inserir(pri);
 						i=i+1;
 					}
 				}
 			}
 		}
-		conj.subConjunto(4, 4);						 //questão 1
+		conj4.subConjunto(conj4);						 //questão 1
 		
 		for(int i=2; i<5; i++){						//questão 2
-			conj.pertinencia(1, i);
+			conj1.pertinencia(i);
 		}
 		
-		int uni=conj.uniao(2, 3);					//questão 3
-		conj.subConjunto(uni, 1);
-		conj.subConjunto(1, uni);
+		Conjunto uni=conj2.uniao(conj3);					//questão 3
+		boolean uniao=uni.igualdade(conj1);
+		if(uniao){
+			System.out.println("São iguais!");
+		}else{
+			System.out.println("São diferentes!");
+		}
 		
-		int inter=conj.interseccao(1, 2);	//questão 4
-		conj.conjVazio(inter);
-	
-		int dife=conj.diferenca(1, 2);		//questão 5
-		conj.mostrarElementos(dife);
+		Conjunto inter=conj1.interseccao(conj2);	//questão 4
+		boolean i=inter.conjVazio();
+		if(i){
+			System.out.println("É vazio!");
+		}else{
+			System.out.println("Não é vazio!");
+		}
+		
+		Conjunto dife=conj1.diferenca(conj2);		//questão 5
+		dife.mostrarElementos();
 	}
 }
