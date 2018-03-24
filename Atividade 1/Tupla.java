@@ -7,18 +7,16 @@ class Tupla{
 	}
 	
 	public boolean equals(Object obj){
-			if(this.getClass() == obj.getClass() && ((Tupla)obj).x.equals(this.x) && ((Tupla)obj).y.equals(this.y)){
-				return true;
+
+			if(this.getClass() == obj.getClass()){
+				
+				if(((Tupla)obj).x.equals(this.x) && ((Tupla)obj).y.equals(this.y)){
+					return true;
+				}else{
+					return false;
+				}
 			}else{
 				return false;
 			}
-	}
-	
-	Object obterx(){
-		return this.x;
-	}
-	
-	Object obtery(){
-		return this.y;
 	}
 }

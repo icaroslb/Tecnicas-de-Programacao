@@ -4,7 +4,7 @@ class Teste1{
 		Conjunto conj2=new Conjunto();
 		Conjunto conj3=new Conjunto();
 		Conjunto conj4=new Conjunto();
-		Conjunto prod1, prod2;
+		Conjunto prod1, prod2, dife, pot1, pot2;
 		
 		
 		for(int i=0; i<10; i++){
@@ -64,7 +64,7 @@ class Teste1{
 			System.out.println("Não é vazio!");
 		}
 		
-		Conjunto dife=conj1.diferenca(conj2);		//questão 5
+		dife=conj1.diferenca(conj2);		//questão 5
 		dife.mostrarElementos();
 		
 		prod1=conj1.produtoCartesiano(conj2);
@@ -74,7 +74,15 @@ class Teste1{
 		}else{
 			System.out.println("São diferentes!");
 		}
-
+		
+		pot1=conj1.conjPotencia();
+		pot2=conj1.conjPotencia();
+		if(pot1.igualdade(pot2)){
+			System.out.println("São iguais!");
+		}else{
+			System.out.println("São diferentes!");
+		}
+		
 		//Teste Lei de Morgan
 		Conjunto espaco=new Conjunto();
 		Conjunto conjA=new Conjunto();
