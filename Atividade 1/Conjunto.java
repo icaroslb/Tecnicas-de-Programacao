@@ -120,21 +120,22 @@ class Conjunto{
 	Conjunto conjPotencia(){
 		Conjunto novo=new Conjunto(), fila;
 		Elem aux1=this.elem, aux2;
-		Tupla tupla;
+		Tupla tp;
 		
 		while(aux1!=null){
 			aux2=novo.elem;
 			fila=new Conjunto();
 			while(aux2!=null){
-				tupla=new Tupla();
-				tupla.preencher(aux1, aux2);
-				fila.inserir(tupla);
+				tp=new Tupla();
+				tp.preencher(aux1.val, aux2.val);
+				//System.out.println(tp.x+":"+aux1.val);
+				fila.inserir(tp);
 				aux2=aux2.prox;
 			}
 			if(fila.elem!=null){
 				novo.inserir(fila.elem);
 			}
-			novo.inserir(aux1);
+			novo.inserir(aux1.val);
 			aux1=aux1.prox;
 		}
 		return novo;

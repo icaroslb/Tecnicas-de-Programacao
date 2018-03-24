@@ -16,6 +16,18 @@ class Elem{
 		this.ant=ant;
 	}
 	
+	public boolean equals(Object obj){
+		if(this.getClass() == obj.getClass()){
+				if(((Elem)obj).val.equals(this.val) && ((Elem)obj).val.equals(this.val)){
+					return true;
+				}else{
+					return false;
+				}
+			}else{
+				return false;
+			}
+	}
+	
 	boolean pertinencia(Object val){
 		Elem aux=this;
 		

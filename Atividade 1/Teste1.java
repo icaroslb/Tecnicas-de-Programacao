@@ -76,7 +76,7 @@ class Teste1{
 		}
 		
 		pot1=conj1.conjPotencia();
-		pot2=conj1.conjPotencia();
+		pot2=conj2.conjPotencia();
 		if(pot1.igualdade(pot2)){
 			System.out.println("São iguais!");
 		}else{
