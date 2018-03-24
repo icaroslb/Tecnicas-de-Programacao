@@ -41,13 +41,15 @@ class Main{
 				}
 			}
 		}
-		
+		System.out.println("Questão 1");
 		conj4.subConjunto(conj4);						 //questão 1
 		
+		System.out.println("\nQuestão 2");
 		for(int i=2; i<5; i++){						//questão 2
 			conj1.pertinencia(i);
 		}
 		
+		System.out.println("\nQuestão 3");
 		Conjunto uni=conj2.uniao(conj3);					//questão 3
 		boolean uniao=uni.igualdade(conj1);
 		if(uniao){
@@ -55,8 +57,8 @@ class Main{
 		}else{
 			System.out.println("São diferentes!");
 		}
-		
-		Conjunto inter=conj1.interseccao(conj2);	//questão 4
+		System.out.println("\nQuestão 4.1");
+		Conjunto inter=conj1.interseccao(conj2);	//questão 4.1
 		boolean eVazio=inter.conjVazio();
 		if(eVazio){
 			System.out.println("É vazio!");
@@ -64,7 +66,8 @@ class Main{
 			System.out.println("Não é vazio!");
 		}
 		
-		dife=conj1.diferenca(conj2);		//questão 5
+		System.out.println("\nQuestão 4.2");
+		dife=conj1.diferenca(conj2);		//questão 4.2
 		dife.mostrarElementos();
 		
 		prod1=conj1.produtoCartesiano(conj2);
@@ -76,13 +79,14 @@ class Main{
 		}
 		
 		pot1=conj1.conjPotencia();
-		pot2=conj2.conjPotencia();
+		pot2=conj1.conjPotencia();
 		if(pot1.igualdade(pot2)){
 			System.out.println("São iguais!");
 		}else{
 			System.out.println("São diferentes!");
 		}
 		
+		System.out.println("\nQuestão 5");
 		//Teste Lei de Morgan
 		Conjunto espaco=new Conjunto();
 		Conjunto conjA=new Conjunto();
