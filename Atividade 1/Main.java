@@ -1,4 +1,4 @@
-class Teste1{
+class Main{
 	public static void main(String[] args){
 		Conjunto conj1=new Conjunto();
 		Conjunto conj2=new Conjunto();
