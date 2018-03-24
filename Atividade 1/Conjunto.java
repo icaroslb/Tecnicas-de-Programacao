@@ -99,7 +99,9 @@ class Conjunto{
 			while(aux2!=null){
 				tp.preencher(aux1.val, aux2.val);
 				pc.inserir(tp);
+				aux2=aux2.prox;
 			}
+			aux1=aux1.prox;
 		}
 		
 		aux2=conjunto.elem;
@@ -108,7 +110,9 @@ class Conjunto{
 			while(aux1!=null){
 				tp.preencher(aux2.val, aux1.val);
 				pc.inserir(tp);
+				aux1=aux1.prox;
 			}
+			aux2=aux2.prox;
 		}
 		return pc;
 	}

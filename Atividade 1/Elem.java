@@ -19,10 +19,10 @@ class Elem{
 	boolean pertinencia(Object val){
 		Elem aux=this;
 		
-		while(aux!=null && aux.val!=val){
+		while(aux!=null && !(aux.val.equals(val))){
 			aux=aux.prox;
 		}
-		
+
 		if(aux!=null){
 			return true;
 		}else{

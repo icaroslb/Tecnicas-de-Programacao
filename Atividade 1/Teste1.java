@@ -74,7 +74,7 @@ class Teste1{
 		}else{
 			System.out.println("São diferentes!");
 		}
-		
+
 		//Teste Lei de Morgan
 		Conjunto espaco=new Conjunto();
 		Conjunto conjA=new Conjunto();
