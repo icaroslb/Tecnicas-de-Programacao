@@ -6,8 +6,8 @@ class Tupla{
 		this.y=y;
 	}
 	
-	public boolean equals(Tupla obj){
-			if((this.x==((Tupla)obj).obterx()) && (this.y==((Tupla)obj).obtery())){
+	public boolean equals(Object obj){
+			if(this.getClass() == obj.getClass() && (this.x==((Tupla)obj).x) && (this.y==((Tupla)obj).y)){
 				return true;
 			}else{
 				return false;

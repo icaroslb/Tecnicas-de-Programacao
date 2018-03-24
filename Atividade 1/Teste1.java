@@ -68,7 +68,7 @@ class Teste1{
 		dife.mostrarElementos();
 		
 		prod1=conj1.produtoCartesiano(conj2);
-		prod2=conj3.produtoCartesiano(conj4);
+		prod2=conj1.produtoCartesiano(conj2);
 		if(prod1.igualdade(prod2)){
 			System.out.println("São iguais!");
 		}else{
