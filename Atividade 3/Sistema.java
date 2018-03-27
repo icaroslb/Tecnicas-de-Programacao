@@ -36,7 +36,7 @@ class Sistema{
 		pos=this.analizarId(id);
 		//Cria a nova conta se possível
 		if(pos!=-1){
-			novo=new Basic();
+			novo=new Basic(id);
 			contas[pos]=novo;
 			
 		}else{
@@ -52,7 +52,7 @@ class Sistema{
 		pos=this.analizarId(id);
 		//Cria a nova conta se possível
 		if(pos!=-1){
-			novo=new Plus();
+			novo=new Plus(id);
 			contas[pos]=novo;
 			
 		}else{
@@ -68,7 +68,7 @@ class Sistema{
 		pos=this.analizarId(id);
 		//Cria a nova conta se possível
 		if(pos!=-1){
-			novo=new Basic();
+			novo=new Extreme(id);
 			contas[pos]=novo;
 			
 		}else{
