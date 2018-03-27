@@ -3,7 +3,7 @@ import java.lang.Math;
 class Circulo extends Figura{
 	
 	Circulo(double x, double y, double raio){
-		super(x, y, raio*2, raio*2, "Circulo");
+		super(x, y, raio*2, raio*2, "Círculo");
 	}
 	
 	double calcularArea(){

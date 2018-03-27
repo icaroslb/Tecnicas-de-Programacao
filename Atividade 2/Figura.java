@@ -1,4 +1,4 @@
-abstract class Figura{
+public abstract class Figura{
 	double x, y, altura, largura;
 	String tipo;
 	
@@ -10,22 +10,23 @@ abstract class Figura{
 		this.tipo=tipo;
 	}
 	
-	public String toString(){
+	//public String toString(){
+	String desenhar(){
 		return this.tipo;
 	}
 	
 	abstract double calcularArea();
 	
-	void mover(double dx, double dy){
+	public void mover(double dx, double dy){
 		this.x+=dx;
 		this.y+=dy;
 	}
 	
-	double posicaox(){
+	public double posicaox(){
 		return this.x;
 	}
 	
-	double posicaoy(){
+	public double posicaoy(){
 		return this.y;
 	}
 }
