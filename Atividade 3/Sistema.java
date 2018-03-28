@@ -101,8 +101,8 @@ class Sistema{
 		}
 	}
 	
-	//Credita o valor na conta do id passado
-	void creditar(int id, double valor){
+	//Credita o valor na conta do id passado - Sobrecarga e Coerção (Float -> Double)
+	void creditar(int id, float valor){
 		//Procura se o id existe
 		Conta credito=this.procurar(id);
 		//Se existir, credita, caso contrário, informa que não existe
@@ -113,8 +113,8 @@ class Sistema{
 		}
 	}
 	
-	//Debita o valor na conta do id passado
-	void debitar(int id, double valor){
+	//Debita o valor na conta do id passado - Sobrecarga e Coerção (Float -> Double)
+	void debitar(int id, float valor){
 		//Procura se o id existe
 		Conta debito=this.procurar(id);
 		//Se existir, debita, caso contrário, informa que não existe
