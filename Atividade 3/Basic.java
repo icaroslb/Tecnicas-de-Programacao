@@ -1,10 +1,10 @@
 class Basic extends Conta{
 	Basic(int id){
-		super(id, "Basic");
+		super(id);
 	}
 	
 	public void creditar(double valor){
-		this.saldo-=valor;
+		this.saldo+=valor;
 	}
 	
 	public void debitar(double valor){

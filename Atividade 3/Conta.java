@@ -2,9 +2,9 @@ public abstract class Conta{
 	int id;
 	double saldo;
 	
-	Conta(int id, String tipo){
+	Conta(int id){
 		this.id=id;
-		this.tipo=tipo;
+		this.saldo=0;
 	}
 	
 	abstract void creditar(double valor);
@@ -14,7 +14,7 @@ public abstract class Conta{
 		return this.id;
 	}
 	
-	int saldoConta(){
+	double saldoConta(){
 		return this.saldo;
 	}
 }

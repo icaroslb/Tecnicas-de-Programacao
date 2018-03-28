@@ -1,7 +1,7 @@
 class Extreme extends Conta{
 	
 	Extreme(int id){
-		super(id, "Extreme");
+		super(id);
 	}
 	
 	void creditar(double valor){
