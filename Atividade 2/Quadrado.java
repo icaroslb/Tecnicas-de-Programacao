@@ -1,7 +1,7 @@
 public class Quadrado extends Figura implements Colorida{
 	
 	Quadrado(double x, double y, double lado){
-		super(x, y, lado, lado, "Quadrado");
+		super(x, y, lado, lado);
 	}
 	
 	double calcularArea(){
@@ -9,6 +9,6 @@ public class Quadrado extends Figura implements Colorida{
 	}
 	
 	public String desenhar(String cor){
-		return this.tipo+" "+cor;
+		return super.desenhar()+" "+cor;
 	}
 }

@@ -1,18 +1,15 @@
 public abstract class Figura{
 	double x, y, altura, largura;
-	String tipo;
 	
-	Figura(double x, double y, double altura, double largura, String tipo){
+	Figura(double x, double y, double altura, double largura){
 		this.x=x;
 		this.y=y;
 		this.altura=altura;
 		this.largura=largura;
-		this.tipo=tipo;
 	}
 	
-	//public String toString(){
 	String desenhar(){
-		return this.tipo;
+		return this.toString();
 	}
 	
 	abstract double calcularArea();
