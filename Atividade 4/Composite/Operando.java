@@ -2,11 +2,11 @@ class Operando implements Calculo{
 	
 	double valor;
 	
-	Operando(int num){
+	Operando(double num){
 		inserir(num);
 	}
 	
-	void inserir(int num){
+	void inserir(double num){
 		valor=num;
 	}
 	
